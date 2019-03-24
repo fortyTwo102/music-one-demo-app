@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/albumArt"
+        android:layout_width="228dp"
+        android:layout_height="228dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/albumArt"
+        android:layout_alignStart="@+id/albumArt"
+        android:layout_marginTop="19dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/album"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/albumArt"
+        android:layout_marginTop="0dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/album"
+        android:layout_alignStart="@+id/title"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/fillTitle"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/fillArtist"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="181dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/fillAlbum"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/fillTitle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="141dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/fillArtist"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fillAlbum"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toStartOf="@+id/fillTitle"
+        android:text="TITLE" />
+
+    <TextView
+        android:id="@+id/albumLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fillArtist"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp"
+        android:layout_toStartOf="@+id/fillTitle"
+        android:text="ALBUM" />
+
+    <TextView
+        android:id="@+id/artistLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fillArtist"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/fillTitle"
+        android:text="ARTIST" />
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/albumArt"
+        android:layout_alignTop="@+id/fillArtist"
+        android:layout_alignRight="@+id/fillArtist"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="125dp"
+        android:onClick="changeFields"
+        android:text="EDIT SONG DETAILS"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_alignLeft="@+id/change"
+        android:layout_alignBottom="@+id/change"
+        android:layout_marginLeft="247dp"
+        android:layout_marginBottom="0dp"
+        android:onClick="saveFields"
+        android:text="FINISH"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/findCover"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/saveButton"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/change"
+        android:onClick="fromLastFM"
+        android:text="FIND COVER"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/justSave"
+        android:layout_width="56dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/albumLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="OnlySave"
+        android:text="save"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
